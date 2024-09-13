@@ -10,7 +10,6 @@ public class DragAndDropTest {
     void checkingMovementTest(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().dragAndDrop($("#column-a"), $("#column-b")).perform();
-        sleep(5000);
 
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
