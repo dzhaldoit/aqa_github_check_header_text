@@ -21,7 +21,6 @@ public class DragAndDropTest {
     void checkingMovementActionsTest(){
         open("/drag_and_drop");
         actions().dragAndDrop($("#column-a"), $("#column-b")).perform();
-        sleep(5000);
 
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
